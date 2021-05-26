@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ved@prakash</title>
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+
+  <section>
+    <h1>Math Addition Quiz Game :)</h1>
+    <div class="centerdiv">
+      <div class="insertBox">
+        <div class="box1">
+          <input type="text" id="v1">
+        </div>
+        <div class="box1">
+          <p>+</p>
+        </div>
+        <div class="box1">
+          <input type="text" id="v2">
+        </div>
+      </div>
+      <div class="middleBox">
+        <input type="text" id="answ">
+      </div>
+      <div class="sentBox">
+        <button onClick="jsGame()">Check Answer</button>
+        <!-- <input type="button" onClick="jsGame()">button text</input>  -->
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <h1>Math multiplication Quiz Game :)</h1>
+    <div class="centerdiv">
+      <div class="insertBox">
+        <div class="box1">
+          <input type="text" id="m1">
+        </div>
+        <div class="box1">
+          <p>*</p>
+        </div>
+        <div class="box1">
+          <input type="text" id="m2">
+        </div>
+      </div>
+      <div class="middleBox">
+        <input type="text" id="answe">
+      </div>
+      <div class="sentBox">
+        <button onClick="jsGames()">Check Answer</button>
+        <!-- <input type="button" onClick="jsGame()">button text</input>  -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+    let n1 = Math.floor(Math.random()*10+1);
+    let n2 = Math.floor(Math.random()*10+1);
+    document.getElementById('v1').value = n1;
+    document.getElementById('v2').value = n2;
+    let ans = n1 + n2;
+    const jsGame = () => {
+      
+        var usera = document.getElementById('answ').value;
+      if(usera == null || usera == undefined || usera ==''){
+        alert('please  answer.');
+      }else{
+        if (usera == ans) {
+        alert('Well done! Your Answer is Correct.');
+      } else {
+        alert("correct answer is " + ans + ". try again. ");
+      }
+      }
+      document.getElementById('answ').value = "";
+      n1 = Math.floor(Math.random()*10+1);
+      n2 = Math.floor(Math.random()*10+1);
+      document.getElementById('v1').value = n1;
+      document.getElementById('v2').value = n2;
+      ans = n1 + n2;
+
+    }
+
+
+  </script>
+
+
+
+<!-- --------------------------------------------------------------- -->
+
+
+<script>
+
+    let a1 = Math.floor(Math.random()*10+1);
+    let a2 = Math.floor(Math.random()*10+1);
+    document.getElementById('m1').value = a1;
+    document.getElementById('m2').value = a2;
+    let answer = a1 * a2;
+    const jsGames = () => {
+      
+      var usera = document.getElementById('answe').value;
+      if(usera == null || usera == undefined || usera ==''){
+        alert('please  answer.');
+      }else{
+        if (usera == answer) {
+        alert('Well done! Your Answer is Correct.');
+      } else {
+        alert("correct answer is " + answer + ". try again. ");
+      }
+      }
+    
+      document.getElementById('answe').value = "";
+      a1 = Math.floor(Math.random()*10+1);
+      a2 = Math.floor(Math.random()*10+1);
+      document.getElementById('m1').value = a1;
+      document.getElementById('m2').value = a2; 
+
+      answer = a1 * a2;
+
+    }
+
+
+  </script>
+
+</body>
+
+</html>
